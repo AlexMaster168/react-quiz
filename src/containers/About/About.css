@@ -1,0 +1,14 @@
+.About {
+    background: linear-gradient(#81fbb8, #28c76f);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.textBlock{
+    width: 500px;
+    height: 300px;
+    background: gray;
+    text-align: center;
+}
