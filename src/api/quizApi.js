@@ -7,11 +7,16 @@ export async function fetchQuizList() {
     axios.get('/Quiz.json', { params: { shallow: true } })
   ])
   const meta = metaRes.data || {}
-  return Object.keys(keysRes.data || {}).map((id, index) => (
-    meta[id]
-      ? { id, ...meta[id] }
-      : { id, title: `Тест №${index + 1}`, description: '', kind: 'quiz', count: null, timeLimit: 0 }
-  ))
+  // Push keys sort chronologically
+  const ids = Object.keys(keysRes.data || {}).sort()
+  const described = ids
+    .filter(id => meta[id])
+    .map(id => ({ id, ...meta[id] }))
+    .sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0))
+  const legacy = ids
+    .filter(id => !meta[id])
+    .map((id, index) => ({ id, title: `Тест №${index + 1}`, description: '', kind: 'quiz', count: null, timeLimit: 0 }))
+  return [...described, ...legacy]
 }
 
 export async function fetchQuiz(id) {
