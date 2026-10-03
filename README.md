@@ -35,7 +35,9 @@
 | --- | --- |
 | ![Конструктор тесту](docs/screenshots/creator.png) | ![Конструктор кросворду](docs/screenshots/crossword-editor.png) |
 
-![Результати учасників](docs/screenshots/results.png)
+| Результати учасників | Про додаток |
+| --- | --- |
+| ![Результати учасників](docs/screenshots/results.png) | ![Про додаток](docs/screenshots/about.png) |
 
 ## Технології
 
@@ -49,3 +51,7 @@ npm run dev      # локальний сервер розробки
 npm run build    # production-збірка в dist/
 firebase deploy --only hosting
 ```
+
+## Автор
+
+Олексій Сільвейструк
