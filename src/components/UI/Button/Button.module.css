@@ -36,3 +36,14 @@
     background: #2884f6;
     color: #fff;
 }
+
+.small {
+    padding: 6px 10px;
+    margin-right: 6px;
+    font-size: 11px;
+}
+
+.light {
+    background: #fff;
+    color: #363d54;
+}

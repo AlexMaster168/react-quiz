@@ -7,20 +7,76 @@
     margin: 0 10px;
 }
 
-.FinishedQuiz ul {
+.FinishedQuiz h2 {
+    margin-top: 0;
+}
+
+.Summary {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.Summary p {
+    margin: 0 0 4px;
+}
+
+.Percent {
+    font-size: 44px;
+    font-weight: bold;
+    min-width: 110px;
+    text-align: center;
+}
+
+.Warning {
+    background: rgba(240, 87, 108, .7);
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.Review {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 0 20px;
 }
 
-.FinishedQuiz ul li i {
-    margin-left: 10px;
+.Review li {
+    padding: 8px 10px;
+    border-radius: 5px;
+    margin-bottom: 6px;
+    background: rgba(255, 255, 255, .08);
 }
 
-.success {
-    color: rgba(161, 240, 69, .7);
+.ReviewHead i {
+    margin-right: 8px;
 }
 
-.error {
-    color: rgba(240, 87, 108, .7);
+.ReviewDetails {
+    margin: 6px 0 0 24px;
+    font-size: 14px;
+    opacity: .9;
+}
+
+.Thumb {
+    display: block;
+    max-height: 80px;
+    max-width: 160px;
+    margin: 6px 0 0 24px;
+    border-radius: 4px;
+}
+
+.success i {
+    color: #a1f045;
+}
+
+.error i {
+    color: #ff8a9a;
+}
+
+.Actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
 }

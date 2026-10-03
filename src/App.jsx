@@ -34,6 +34,7 @@ function App() {
         ) : (
           <>
             <Route path="/quiz-creator" element={<QuizCreator />} />
+            <Route path="/quiz-creator/:id" element={<QuizCreator />} />
             <Route path="/quiz/:id" element={<Quiz />} />
             <Route path="/about" element={<About />} />
             <Route path="/logout" element={<Logout />} />

@@ -7,18 +7,17 @@ function Drawer({ isOpen, onClose, isAuthenticated }) {
   const clickHandler = () => onClose()
 
   const links = [
-    { to: '/', label: 'Список', exact: true }
+    { to: '/', label: 'Список', exact: true },
+    { to: '/results', label: 'Результати', exact: false }
   ]
 
   if (isAuthenticated) {
-    links.push({ to: '/quiz-creator', label: 'Створити тест', exact: false })
+    links.push({ to: '/quiz-creator', label: 'Створити', exact: true })
     links.push({ to: '/about', label: 'Про додаток', exact: false })
-    links.push({ to: '/results', label: 'Результати', exact: false })
     links.push({ to: '/logout', label: 'Вийти', exact: false })
   } else {
-    links.push({ to: '/auth', label: 'Авторизація', exact: false })
     links.push({ to: '/about', label: 'Про додаток', exact: false })
-    links.push({ to: '/results', label: 'Результати', exact: false })
+    links.push({ to: '/auth', label: 'Авторизація', exact: false })
   }
 
   const cls = [classes.Drawer]

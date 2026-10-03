@@ -10,10 +10,21 @@ export const auth = createAsyncThunk('auth/auth', async ({ email, password, isLo
   return response.data
 })
 
+// Read synchronously so protected routes don't redirect before autoLogin runs
+function storedToken() {
+  try {
+    const token = localStorage.getItem('token')
+    const expirationDate = new Date(localStorage.getItem('expirationDate'))
+    return token && expirationDate > new Date() ? token : null
+  } catch {
+    return null
+  }
+}
+
 const authSlice = createSlice({
   name: 'auth',
   initialState: {
-    token: null
+    token: storedToken()
   },
   reducers: {
     logout(state) {

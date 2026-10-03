@@ -7,7 +7,97 @@
     box-sizing: border-box;
 }
 
+.Progress {
+    height: 4px;
+    background: rgba(255, 255, 255, .25);
+    border-radius: 2px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.Progress div {
+    height: 100%;
+    background: #fff;
+    transition: width .3s ease;
+}
+
 .Question {
     display: flex;
     justify-content: space-between;
+    gap: 15px;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.Question small {
+    white-space: nowrap;
+    opacity: .8;
+}
+
+.Image {
+    display: block;
+    max-width: 100%;
+    max-height: 360px;
+    margin: 0 auto 15px;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.Hint {
+    margin: 0 0 10px;
+    font-size: 14px;
+    opacity: .85;
+}
+
+.Answers {
+    list-style: none;
+    margin: 0 0 15px;
+    padding: 0;
+}
+
+.Answer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    text-align: left;
+    font: inherit;
+    color: #fff;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+}
+
+.Answer:hover:not(:disabled) {
+    background: rgba(255, 255, 255, .2);
+}
+
+.Answer:disabled {
+    cursor: default;
+}
+
+.selected {
+    background: rgba(255, 255, 255, .3);
+}
+
+.success {
+    background: rgba(161, 240, 69, .7);
+}
+
+.error {
+    background: rgba(240, 87, 108, .7);
+}
+
+.missed {
+    border: 2px dashed #a1f045;
+}
+
+.Feedback {
+    margin: 0;
+    font-weight: bold;
+    font-size: 18px;
 }

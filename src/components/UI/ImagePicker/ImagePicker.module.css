@@ -1,0 +1,54 @@
+.ImagePicker {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.ImagePicker button,
+.Preview button {
+    border: 1px solid #bebebe;
+    background: #fff;
+    border-radius: 4px;
+    padding: 6px 10px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.ImagePicker button:disabled {
+    cursor: not-allowed;
+    opacity: .6;
+}
+
+.ImagePicker input[type="url"] {
+    flex: 1 1 160px;
+    min-width: 0;
+    border: 1px solid #bebebe;
+    padding: 6px;
+}
+
+.Or {
+    font-size: 12px;
+    color: #777;
+}
+
+.Preview {
+    margin-bottom: 12px;
+}
+
+.Preview img {
+    display: block;
+    max-width: 100%;
+    max-height: 220px;
+    border-radius: 4px;
+    margin-bottom: 6px;
+}
+
+.Error {
+    display: block;
+    width: 100%;
+    color: #f01f30;
+    font-size: 12px;
+    font-weight: bold;
+}

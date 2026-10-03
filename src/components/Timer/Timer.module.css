@@ -1,0 +1,40 @@
+.Timer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0 10px 15px;
+    font-variant-numeric: tabular-nums;
+}
+
+.Track {
+    flex-grow: 1;
+    height: 6px;
+    background: rgba(255, 255, 255, .25);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.Bar {
+    height: 100%;
+    background: #a1f045;
+    transition: width .25s linear;
+}
+
+.danger {
+    color: #ffd1d8;
+}
+
+.danger .Bar {
+    background: #f0576c;
+}
+
+.danger span {
+    animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    50% { opacity: .5; }
+}
